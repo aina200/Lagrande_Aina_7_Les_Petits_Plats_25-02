@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+*, html {
+  font-family: "Lato";
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.index_header {
+  width: 100%;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 3%;
+}
+.index_header img {
+  width: 268px;
+  height: 93px;
+}
+
+.section_recipe {
+  width: 100%;
+  height: 100%;
+}
+.section_recipe .section_box {
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.recipe {
+  background-color: #E7E7E7;
+  width: 30%;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  margin-left: 3%;
+  padding-bottom: 50px;
+  cursor: pointer;
+}
+.recipe .article_box {
+  width: 100%;
+  height: 100%;
+}
+.recipe .article_box .card_img {
+  border-radius: 10px 10px 0 0;
+  background-color: #C7BEBE;
+  width: 100%;
+  height: 200px;
+}
+.recipe .txt_container {
+  width: 100%;
+  font-weight: 500;
+}
+.recipe .txt_container li {
+  list-style-type: none;
+}
+.recipe .txt_container img {
+  max-width: 20px;
+  max-height: 20px;
+}
+.recipe .txt_container .title_time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5%;
+}
+.recipe .txt_container .title_time .title_name {
+  width: 70%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.recipe .txt_container .title_time span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 15%;
+}
+.recipe .txt_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0% 5% 0% 5%;
+}
+.recipe .txt_box .txt_items {
+  width: 100%;
+  height: 100%;
+}
+.recipe .txt_box .txt_items .description {
+  height: 80%;
+  max-height: 11rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.error_box {
+  width: 100%;
+  height: 100%;
+  margin-top: 8%;
+}
+.error_box p {
+  text-align: center;
+  font-size: 30px;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.research {
+  height: 80px;
+  border-radius: 0.5rem;
+  background-color: #E7E7E7;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 1.5%;
+}
+.research input {
+  border-color: transparent;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  padding: 2%;
+  color: black;
+  font-size: 1.8rem;
+}
+.research .research__btn {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1.7rem 1.9rem;
+  cursor: pointer;
+}
+.research .research__btn img {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.tags_section {
+  width: 85%;
+  margin: auto;
+  margin-top: 5%;
+}
+.tags_section .tags_container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.tags_section .tags_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.tags_section .tags_box i {
+  color: white;
+  position: relative;
+}
+.tags_section .input_box {
+  width: 13rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  color: white;
+  padding: 1.3rem;
+  background-color: #3282F7;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+.tags_section .input_box input {
+  color: white;
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: none;
+  width: 100%;
+  position: relative;
+  border: 1px solid white;
+}
+.tags_section .tag_button {
+  width: 100%;
+  background-color: #3282F7;
+  border: none;
+}
+.tags_section ::-webkit-input-placeholder {
+  color: white;
+}
+.tags_section ::-moz-placeholder {
+  color: white;
+}
+.tags_section :-ms-input-placeholder {
+  color: white;
+}
+.tags_section ::-ms-input-placeholder {
+  color: white;
+}
+.tags_section ::placeholder {
+  color: white;
+}
+.tags_section .green {
+  background-color: #68D9A4;
+}
+.tags_section .red {
+  background-color: #ED6454;
+}
+
+.hide {
+  display: none;
+}
+
+.active-filter {
+  opacity: 1 !important;
+  z-index: 3;
+}
+
+.list__blue, .list__green, .list__red {
+  position: absolute;
+  margin-top: 68px;
+  display: none;
+  padding-top: 26px;
+  width: 700px;
+  height: 45vh;
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 400;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #3282f7;
+  overflow-y: auto;
+}
+
+.list__blue__ul, .list__green__ul, .list__red__ul {
+  width: 100%;
+  padding: 0 10px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
+#chevron-up-blue, #chevron-up-green, #chevron-up-red {
+  display: none;
+}
+
+.ingredient,
+.device,
+.ustensil {
+  width: 150px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 2%;
+  margin-right: 3%;
+}
+
+.ingredient:hover,
+.device:hover,
+.ustensil:hover {
+  color: black;
+}
+
+#tags_button_section {
+  width: 100%;
+}
+
+.btntag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #3282f7;
+  width: 14.5%;
+  max-width: 100%;
+  padding: 1%;
+  margin-bottom: 1%;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+}
+.btntag span {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.btntag__cross_container {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .research {
+    margin-top: 5%;
+  }
+  .research input {
+    font-size: 1.2rem;
+  }
+
+  .tags_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .tags_section .tags_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .tags_section .input_box {
+    width: 21rem;
+    margin-top: 5%;
+  }
+
+  .section_recipe .section_box {
+    width: 85%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .recipe {
+    background-color: #E7E7E7;
+    width: 95%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    padding-bottom: 50px;
+    cursor: pointer;
+  }
+}
+/*# sourceMappingURL=style.scss.map */
+
+/*# sourceMappingURL=style.css.map */

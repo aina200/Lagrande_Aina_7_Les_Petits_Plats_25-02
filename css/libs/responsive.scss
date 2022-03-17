@@ -1,0 +1,57 @@
+@media (max-width: 768px) {
+    // SEARCH PRINCIPAL 
+    .research {
+        margin-top: 5%;
+
+        input{
+            font-size: 1.2rem;
+        }
+    }
+    // TAGS 
+    .tags_section{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+
+        .tags_container{
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;     
+        }
+
+        .input_box{
+            width: 21rem;
+            margin-top: 5%;
+        }
+    }
+    // RECIPE 
+    .section_recipe{
+        .section_box{
+            width: 85%;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+    }
+    .recipe{
+        background-color: #E7E7E7;
+        width: 95%;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        margin-left: 3%;
+        padding-bottom: 50px;
+        cursor: pointer;
+    }
+}

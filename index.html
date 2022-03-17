@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Les petits plats, recettes, ingrédients, ustensiles, appareils pour cuisiner">
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Les petits plats</title>
+  </head>
+    <body>
+      <header class="index_header">
+        <img src="/img/logo.png" alt="Logo de 'Les petits plats'">
+      </header>
+      <!-- PRINCIPAL SEARCH BAR  -->
+      <form class="research" aria-label="Champs de recherche principal">
+        <input class="research__txt" type="text" id="searchbar"  placeholder="Rechercher une recette" aria-label="Saisir ici ce que vous recherchez"/>
+        <div class="research__btn" id="btnSearch" aria-label="Cliquer pour lancer la recherche">
+          <img src="/img/search.png" alt="Loupe">
+        </div>
+      </form>
+
+      <!-- TAGS SEARCH -->
+      <section class="tags_section" id="tags_section">
+        <div id="tags_button_section"></div>
+        <div class="tags_container">
+
+          <div class="tags_box">
+            <div class="input_box">
+              <span class="btn__span" id="btn-ingredient-text">Ingredients</span>
+              <input type="text" class="tag_button" id="search_ingredients" > 
+              <i class="fas fa-chevron-down" id="chevron-down-blue"></i>
+              <i class="fas fa-chevron-up" id="chevron-up-blue"></i>
+            </div>
+            <!-- TAGS LIST  -->
+            <div class="list__blue" id="list__blue">
+              <ul class="list__blue__ul" id="ingredientsList"></ul>
+            </div>
+          </div>
+
+          <div class="tags_box">
+            <div class="input_box green">
+              <span class="btn__span" id="btn-device-text">Appareils</span>
+              <input type="text" class="tag_button green" id="search_devices"> 
+              <i class="fas fa-chevron-down" id="chevron-down-green"></i>
+              <i class="fas fa-chevron-up" id="chevron-up-green"></i>
+            </div>
+             <!-- TAGS LIST  -->
+            <div class="list__green green" id="list__green">
+              <ul class="list__green__ul green" id="devicesList"></ul>
+            </div>
+          </div>
+          <div class="tags_box">
+            <div class="input_box red">
+              <span class="btn__span" id="btn-ustensil-text">Ustensiles</span>
+              <input type="text" class="tag_button red" id="search_ustensils"> 
+              <i class="fas fa-chevron-down" id="chevron-down-red"></i>
+              <i class="fas fa-chevron-up" id="chevron-up-red"></i>
+            </div>
+             <!-- TAGS LIST  -->              
+            <div class="list__red red" id="list__red">
+              <ul class="list__red__ul red" id="ustensilsList"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     <!-- ERROR BOX  -->
+      <div class="error_box d-none" id="error">
+        <p>Aucune recette ne correspond à votre critère…</p>
+      </div>
+      <!-- RECIPES  -->
+      <section class="section_recipe" id="section_recipe">
+        <div class="section_container" id="main-container" aria-label="conteneur">
+          <div class="section_box" id="main-section" aria-label="box">
+          </div>
+        </div>
+      </section>
+
+      <!-- SCRIPTS  -->
+      <!-- <script type ="module" src="./script/pages/versionA.js" ></script> -->
+      <script type ="module" src="./script/pages/versionB.js" ></script>
+    </body>
+</html>
