@@ -17,21 +17,17 @@ let tagsTable = [];
 renderRecipes(recipes);
 // RECIPE FILTER
 const RecipeFilter = (wordToFind, recipeArray) => {
-    const filteredArray = recipeArray.filter((recipe) => {
-        let ingredients = recipe.ingredients;
-        let ingredientTable = [];
-        ingredients.forEach((ingr) => {
-            ingredientTable.push(ingr.ingredient);
-        });
-        if (
-            matchInput(recipe.name, wordToFind) ||
-            matchInput(recipe.description, wordToFind) ||
-            matchWithTable(ingredientTable, wordToFind)
-        ) {
-            return recipe;
-        }
+  const filteredArray = recipeArray.filter((recipe) => {
+    let ingredients = recipe.ingredients;
+    let ingredientTable = [];
+    ingredients.forEach((ingr) => {
+      ingredientTable.push(ingr.ingredient);
     });
-    return filteredArray;
+    if (matchInput(recipe.name, wordToFind) || matchInput(recipe.description, wordToFind) || matchWithTable(ingredientTable, wordToFind)) {
+      return recipe;
+    } 
+  });
+  return filteredArray;
 };
 //  FILTER INGRIDIENTS ON TAG CLICK 
 const FilterRecipesByIngredient = (ingredientName, recipeArray) => {
@@ -241,32 +237,24 @@ searchbar.addEventListener("keyup", (e) => {
     filterElements(serchedLetters,cards);
 });
 
- function filterElements(letters, elements) {
-    if (letters.length >= 3) {
-        clearContent();
-        recipes.forEach(async (recipe) => {
-            let i = 0;
-            const isNameIncludes = recipe.name.toLowerCase().includes(letters)
-            const isDescriptionIncludes = recipe.description.includes(letters)
-            const isIngridientsIncludes = recipe.ingredients.filter(ingredient => ingredient.ingredient.toLowerCase().includes(letters)).length > 0
-            
-            if (isNameIncludes ||isDescriptionIncludes||isIngridientsIncludes) {
-                filteredTable = RecipeFilter(letters, recipes);
-                renderRecipes(filteredTable);
-            }
-            else {
-            invalidSearch();
-            }
-            i++;
-        });
-      } else {
-        clearContent()
-        invalidSearchInput.classList.replace('d-block', 'd-none');
-        filteredTable = recipes;
-        renderRecipes(filteredTable);
-      }
-}
+function filterElements(letters, elements) {
+  if (letters.length >= 3) {
+    clearContent();
+    filteredTable = RecipeFilter(letters, recipes);
+    renderRecipes(filteredTable);
 
+    if (!filteredTable.length){
+      invalidSearch()
+    }       
+  } 
+  else{
+    clearContent()
+    invalidSearchInput.classList.replace('d-block', 'd-none');
+    filteredTable = recipes;
+    renderRecipes(filteredTable);
+      
+  }
+}
 // ERROR 
 function invalidSearch() {
   if (recipesSection.children.length == 0) {
