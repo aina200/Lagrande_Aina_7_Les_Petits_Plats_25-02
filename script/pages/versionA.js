@@ -24,11 +24,7 @@ const RecipeFilter = (wordToFind, recipeArray) => {
     for (let y = 0; y < ingredients.length; y++) {
       ingredientTable.push(ingredients[y].ingredient);
     }
-    if (
-      matchInput(recipeArray[i].name, wordToFind) ||
-      matchInput(recipeArray[i].description, wordToFind) ||
-      matchWithTable(ingredientTable, wordToFind)
-    ) {
+    if (matchInput(recipeArray[i].name, wordToFind) || matchInput(recipeArray[i].description, wordToFind) || matchWithTable(ingredientTable, wordToFind)) {
       filteredArray.push(recipeArray[i]);
     } 
   }
@@ -245,19 +241,12 @@ searchbar.addEventListener("keyup", (e) => {
  function filterElements(letters, elements) {
   if (letters.length >= 3) {
     clearContent();
-    for (let recipe of recipes){
-      const isNameIncludes = recipe.name.toLowerCase().includes(letters);
-      const isDescriptionIncludes = recipe.description.toLowerCase().includes(letters);
-      const isIngridientsIncludes = recipe.ingredients.filter(ingredient => ingredient.ingredient.toLowerCase().includes(letters)).length > 0
+    filteredTable = RecipeFilter(letters, recipes);
+    renderRecipes(filteredTable);
 
-      if (isNameIncludes|| isDescriptionIncludes|| isIngridientsIncludes) {
-        filteredTable = RecipeFilter(letters, recipes);
-        renderRecipes(filteredTable);
-      }
-      else{
-        invalidSearch()
-      }
-    }        
+    if (!filteredTable.length){
+      invalidSearch()
+    }       
   } 
   else{
     clearContent()
@@ -281,3 +270,5 @@ function invalidSearch() {
 function clearContent() {
   recipesSection.innerText = '';
 }
+
+
