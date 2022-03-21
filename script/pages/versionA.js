@@ -1,5 +1,5 @@
-import recipes from "data/recipes.js";
-import renderRecipes from "factory/displayRecipe.js";
+import recipes from "../data/recipes.js";
+import renderRecipes from "../script/factory/displayRecipe.js";
 
 // DOM 
 const searchbar = document.querySelector('#searchbar');
