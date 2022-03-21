@@ -1,4 +1,4 @@
-import recipes from "../data/recipes.js";
+import recipes from "./data/recipes.js";
 import renderRecipes from "./script/factory/displayRecipe.js";
 
 // DOM 
