@@ -246,6 +246,9 @@ searchbar.addEventListener("keyup", (e) => {
 
     if (!filteredTable.length){
       invalidSearch()
+    }
+    else{
+      invalidSearchInput.classList.replace('d-block', 'd-none');
     }       
   } 
   else{

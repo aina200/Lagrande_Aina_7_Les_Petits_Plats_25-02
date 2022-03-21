@@ -245,7 +245,9 @@ function filterElements(letters, elements) {
 
     if (!filteredTable.length){
       invalidSearch()
-    }       
+    }else{
+      invalidSearchInput.classList.replace('d-block', 'd-none');
+    }
   } 
   else{
     clearContent()
