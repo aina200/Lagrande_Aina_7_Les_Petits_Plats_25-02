@@ -1,7 +1,6 @@
 # Les petits plats
 ***
-
-<a href="./img/presentation.png"></a>
+<img src="./img/presentation.png" alt="capture d'ecran du site "/>
 ## Un algorithme de recherche en JavaScript
 FishEye est un site web qui permet aux photographes indépendants de présenter leurs meilleurs travaux.
 
