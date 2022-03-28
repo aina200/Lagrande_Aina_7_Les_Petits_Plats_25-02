@@ -7,12 +7,7 @@ FishEye est un site web qui permet aux photographes indépendants de présenter 
 
 ***
 ### Lien du site
-<<<<<<< HEAD
 https://ainalagrande.github.io/Lagrande_Aina_7_Les_Petits_Plats_25-02/
-=======
-https://ainaLagrande.github.io/Lagrande_Aina_7_Les_Petits_Plats_25-02
-
->>>>>>> 1d1d14b9b5cae257babff0bc0f578c2e2a5728b2
 ***
 ### Maquettes du site 
 https://www.figma.com/file/xqeE1ZKlHUWi2Efo8r73NK/UI-Design-Les-Petits-Plats-FR
