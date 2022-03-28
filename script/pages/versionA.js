@@ -93,7 +93,6 @@ let ResultByTag = () => {
   if (filteredTable === null && tagsTable.length > 0) {
     filteredTable = recipes;
     tagsTable.forEach((tag) => {
-      
       switch (tag.type) {
         case "ingredient":
           filteredTable = FilterRecipesByIngredient(tag.name, filteredTable);
@@ -185,8 +184,8 @@ listOfIngredients.addEventListener("click", (e) => {
   });
   if (FoundInTable.length === 0) {
     sectiontag.innerHTML += `<button id="${tagName}" class="btntag btntag__blue"><span class="btntag--span">${tagName}</span>
-          <div class="btntag__cross_container"><i class="far fa-times-circle"></i></div>
-        </button>`;
+      <div class="btntag__cross_container"><i class="far fa-times-circle"></i></div>
+      </button>`;
     tagsTable.push({ name: tagName, type: "ingredient" });
     ClosureOfTags();
   } else {
@@ -204,8 +203,8 @@ listOfDevices.addEventListener("click", (e) => {
   });
   if (FoundInTable.length === 0) {
     sectiontag.innerHTML += `<button id="${tagName}" class="btntag btntag__green green"><span class="btntag--span">${tagName}</span>
-          <div class="btntag__cross_container"><i class="far fa-times-circle"></i></div>
-        </button>`;
+      <div class="btntag__cross_container"><i class="far fa-times-circle"></i></div>
+      </button>`;
     tagsTable.push({ name: tagName, type: "device" });
     ClosureOfTags();
   }
@@ -221,8 +220,8 @@ listOfUstensils.addEventListener("click", (e) => {
   });
   if (FoundInTable.length === 0) {
     sectiontag.innerHTML += `<button id="${tagName}" class="btntag btntag__red red"><span class="btntag--span">${tagName}</span>
-          <div class="btntag__cross_container"><i class="far fa-times-circle"></i></div>
-        </button>`;
+      <div class="btntag__cross_container"><i class="far fa-times-circle"></i></div>
+      </button>`;
     tagsTable.push({ name: tagName, type: "ustensil" });
     ClosureOfTags();
   }
@@ -233,9 +232,9 @@ listOfUstensils.addEventListener("click", (e) => {
 
 // PRINCIPAL SEARCH BAR 
 searchbar.addEventListener("keyup", (e) => {
-    const serchedLetters = e.target.value.toLowerCase();
-    const cards = document.querySelectorAll(".recipe");
-    filterElements(serchedLetters,cards);
+  const serchedLetters = e.target.value.toLowerCase();
+  const cards = document.querySelectorAll(".recipe");
+  filterElements(serchedLetters,cards);
 });
 
  function filterElements(letters, elements) {

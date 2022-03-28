@@ -228,7 +228,7 @@
 
     // MATCH BETWEEN A WORD AND CHARACTER STRING 
     const matchInput = (string, inputword) => {
-        return string.toLowerCase().match(inputword.toLowerCase()) ? true : false;
+      return string.toLowerCase().match(inputword.toLowerCase()) ? true : false;
     };
   
   //GET INGRIDIENT ON TAPE 
@@ -263,7 +263,7 @@
 
           ingredientList.innerHTML = "";
         matchsearcharray.forEach((i) => {
-            ingredientList.innerHTML += `<li class="ingredient">${i}</li>`;
+          ingredientList.innerHTML += `<li class="ingredient">${i}</li>`;
         });
       }
     });
@@ -280,7 +280,7 @@
           return r.appliance;
         });
         deviceTables.forEach((device) => {
-            deviceArray.push(device.toLowerCase());
+          deviceArray.push(device.toLowerCase());
         });
         const firstUppercaseLetter = deviceArray.map((i) => {
           return i.charAt(0).toUpperCase() + i.slice(1);
@@ -296,7 +296,7 @@
 
         deviceList.innerHTML = "";
         matchsearcharray.forEach((i) => {
-            deviceList.innerHTML += `<li class="device">${i}</li>`;
+          deviceList.innerHTML += `<li class="device">${i}</li>`;
         });
       }
     });
@@ -331,7 +331,7 @@
         });
           ustensilList.innerHTML = "";
         matchsearcharray.forEach((i) => {
-            ustensilList.innerHTML += `<li class="ustensil">${i}</li>`;
+          ustensilList.innerHTML += `<li class="ustensil">${i}</li>`;
         });
       }
     });
