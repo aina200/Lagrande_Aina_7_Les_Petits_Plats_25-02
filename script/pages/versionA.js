@@ -27,7 +27,6 @@ const RecipeFilter = (wordToFind, recipeArray) => {
     if (matchInput(recipeArray[i].name, wordToFind) || matchInput(recipeArray[i].description, wordToFind) || matchWithTable(ingredientTable, wordToFind)) {
       filteredArray.push(recipeArray[i]);
     } 
-
   }
   return filteredArray;
 };
@@ -112,15 +111,19 @@ let ResultByTag = () => {
       }
     });
     filteredTable = null;
-  } else if (filteredTable === null && tagsTable.length === 0) {
+  } 
+  else if (filteredTable === null && tagsTable.length === 0) {
     renderRecipes(recipes);
-  } else if (filteredTable.length > 0 && tagsTable.length > 0) {
+  }
+   else if (filteredTable.length > 0 && tagsTable.length > 0) {
     const rootTable = filteredTable;
     tagsTable.forEach((tag) => {
       switch (tag.type) {
         case "ingredient":
           filteredTable = FilterRecipesByIngredient(tag.name, filteredTable);
           renderRecipes(filteredTable);
+          
+
           break;
         case "device":
           filteredTable = FilterRecipesByDevice(tag.name, filteredTable);
@@ -152,13 +155,15 @@ const ClosureOfTags = () => {
           if (tag.name === tagNameTrimed && tag.type === "ingredient") {
             const indexOfTags = tagsTable.indexOf(tag);
             tagsTable.splice(indexOfTags);
+            
           }
         });
-      } else if (tagBtn.className === "btntag btntag__green") {
+      } else if (tagBtn.className === "btntag btntag__green green") {
         tagsTable.forEach((tag) => {
           if (tag.name === tagNameTrimed && tag.type === "device") {
             const indexOfTags = tagsTable.indexOf(tag);
             tagsTable.splice(indexOfTags);
+            
           }
         });
       } else {
@@ -230,7 +235,6 @@ listOfUstensils.addEventListener("click", (e) => {
 });
 
 
-
 // PRINCIPAL SEARCH BAR 
 searchbar.addEventListener("keyup", (e) => {
   const serchedLetters = e.target.value.toLowerCase();
@@ -255,7 +259,8 @@ searchbar.addEventListener("keyup", (e) => {
     clearContent()
     invalidSearchInput.classList.replace('d-block', 'd-none');
     filteredTable = recipes;
-    ResultByTag();      
+    ResultByTag();
+      
   }
 }
 
@@ -272,5 +277,3 @@ function invalidSearch() {
 function clearContent() {
   recipesSection.innerText = '';
 }
-
-
