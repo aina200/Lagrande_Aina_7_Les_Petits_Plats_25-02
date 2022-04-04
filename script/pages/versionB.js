@@ -251,7 +251,7 @@ function filterElements(letters, elements) {
     clearContent()
     invalidSearchInput.classList.replace('d-block', 'd-none');
     filteredTable = recipes;
-    renderRecipes(filteredTable);
+    ResultByTag();  
       
   }
 }
