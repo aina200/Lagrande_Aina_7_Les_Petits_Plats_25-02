@@ -27,6 +27,7 @@ const RecipeFilter = (wordToFind, recipeArray) => {
     if (matchInput(recipeArray[i].name, wordToFind) || matchInput(recipeArray[i].description, wordToFind) || matchWithTable(ingredientTable, wordToFind)) {
       filteredArray.push(recipeArray[i]);
     } 
+
   }
   return filteredArray;
 };
@@ -254,8 +255,7 @@ searchbar.addEventListener("keyup", (e) => {
     clearContent()
     invalidSearchInput.classList.replace('d-block', 'd-none');
     filteredTable = recipes;
-    renderRecipes(filteredTable);
-      
+    ResultByTag();      
   }
 }
 
